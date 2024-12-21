@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Online News</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <h1>Online News</h1>
+  <a href="/articles/new">New Article</a>
+  <ul>
+    <% articles.forEach(article => { %>
+      <li>
+        <h2><%= article.title %></h2>
+        <p><%= article.content %></p>
+        <small><%= article.createdAt.toDateString() %></small>
+      </li>
+    <% }) %>
+  </ul>
+</body>
+</html>
